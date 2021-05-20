@@ -1,0 +1,129 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My HTML Page</title>
+    <link rel="stylesheet" type="text/css" title="Cool stylesheet" href="css/styles.css">
+</head>
+
+
+<body>
+    <div class="header">
+        <div class="logo_container">
+           <a href="webpage.html">
+            <img src="images/logo1.png" style="max-width:100%">
+            </a>
+        </div>
+
+        <h1> Sazzier Art</h1>
+
+    </div>
+
+    <div class="cat_container">
+        <div id="subhead">
+        <nav class="mainNav" id="responsiveNav">
+				<a href="#shop">
+					<h2>Shop</h2>
+				</a>
+				<a href="#collection">
+					<h2>Collection</h2>
+				</a>
+				<a href="#about">
+					<h2>About</h2>
+				</a>
+				<a href="#contact">
+					<h2>Contact</h2>
+				</a>
+				<a href="javascript:void(0);" style="font-size:6vw;" class="icon" onclick="myFunction()">&#9776;</a>
+			</nav>
+        </div>
+    </div>
+    <div class="slide_container">
+        <div class="featured">
+           <button class="button2" onclick="plusDivs(-1)">&#10094;</button>
+            <img class="mySlides" src="images/sticker_dango_big.JPG" style="width: 350px">
+            <img class="mySlides" src="images/sticker_dango2_big.JPG" style="width: 350px">
+            <div class="center">
+            <button class="button2" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        </div>
+        
+        <div class ="featuredDesription" style ="max-width: 80%">
+            <p1><b>Cat Dango Sticker</b><br>$3.50<br>
+            <button class="button3">Add to Cart</button>
+            <br>
+            <p2>
+            Perfect for laptops, water bottles and more! Weatherproof vinyl with glossy finish. 3 in x 1 in. Colors may vary in person.
+            </p2>
+        </p1>
+        </div>
+
+    </div>
+    
+    <div class="recommended">
+    <h2>You also might like:</h2>
+</div>
+    
+
+    <div class="flex_container">
+        <div class="flex_item2">
+            <img src="images/pin_tako.JPG">
+            <p>
+                <a href="product5.html">Cat Tako Pin<br>$12.00<br></a>
+                <button class="button1">Add to Cart</button>
+            </p>
+        </div>
+        <div class="flex_item2">
+            <img src="images/pin_onigiri2.jpg">
+            <p>
+                <a href="product2.html">Cat Onigiri Pin<br>$12.00<br></a>
+                <button class="button1">Add to Cart</button>
+            </p>
+        </div>
+        <div class="flex_item2">
+            <img src="images/sticker_bento.jpg">
+            <p>
+                <a href="product3.html">Cat Bento Sticker<br>$3.50<br></a>
+                <button class="button1">Add to Cart</button>
+            </p>
+        </div>
+
+    </div>
+    
+    <script>
+		function myFunction() {
+			var x = document.getElementById("responsiveNav");
+			if (x.className === "mainNav") {
+				x.className += " responsive";
+			} else {
+				x.className = "mainNav";
+			}
+		}
+	</script>
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+
+</body></html>
